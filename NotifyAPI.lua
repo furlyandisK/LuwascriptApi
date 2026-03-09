@@ -1,5 +1,6 @@
 --[[
     NOTIFYAPI - FULL GUIDE
+    Also yes made by ai
     ----------------------
     STEP 1: Host NotifyAPI.lua on a public GitHub repo.
             Get the raw URL by opening the file and clicking "Raw".
