@@ -1,6 +1,5 @@
 --[[
     NOTIFYAPI - FULL GUIDE
-    Also yes made by ai
     ----------------------
     STEP 1: Host NotifyAPI.lua on a public GitHub repo.
             Get the raw URL by opening the file and clicking "Raw".
@@ -104,7 +103,7 @@ local function createCard(title, message, theme)
 	Card.Size = UDim2.new(1, 0, 0, 0)
 	Card.AutomaticSize = Enum.AutomaticSize.Y
 	Card.BackgroundColor3 = Color3.fromRGB(16, 16, 22)
-	Card.BackgroundTransparency = 0
+	Card.BackgroundTransparency = 0.35
 	Card.BorderSizePixel = 0
 	Card.ClipsDescendants = false
 	Card.Position = UDim2.new(0, CARD_W + 30, 0, 0)
@@ -121,7 +120,7 @@ local function createCard(title, message, theme)
 	Shadow.Size = UDim2.new(1, 14, 1, 14)
 	Shadow.Position = UDim2.new(0, -7, 0, 7)
 	Shadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	Shadow.BackgroundTransparency = 0.55
+	Shadow.BackgroundTransparency = 0.7
 	Shadow.BorderSizePixel = 0
 	Shadow.ZIndex = 1
 	Shadow.Parent = Card
@@ -323,13 +322,13 @@ local function Notify(arg1, arg2, arg3)
 		if dismissed then return end
 		hovered = true
 		progressFill.Size = UDim2.new(math.clamp(remaining / duration, 0, 1), 0, 1, 0)
-		TweenService:Create(card, TweenInfo.new(0.12), { BackgroundColor3 = Color3.fromRGB(26, 26, 36) }):Play()
+		TweenService:Create(card, TweenInfo.new(0.12), { BackgroundColor3 = Color3.fromRGB(26, 26, 36), BackgroundTransparency = 0.2 }):Play()
 	end)
 	card.MouseLeave:Connect(function()
 		if dismissed then return end
 		hovered = false
 		startProgressTween(math.clamp(remaining / duration, 0, 1))
-		TweenService:Create(card, TweenInfo.new(0.12), { BackgroundColor3 = Color3.fromRGB(16, 16, 22) }):Play()
+		TweenService:Create(card, TweenInfo.new(0.12), { BackgroundColor3 = Color3.fromRGB(16, 16, 22), BackgroundTransparency = 0.35 }):Play()
 	end)
 
 	closeBtn.MouseButton1Click:Connect(function()
