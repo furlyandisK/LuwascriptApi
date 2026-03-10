@@ -1,14 +1,10 @@
 --[[
     NOTIFYAPI - FULL GUIDE
     ----------------------
-    STEP 1: Host NotifyAPI.lua on a public GitHub repo.
-            Get the raw URL by opening the file and clicking "Raw".
-            Example: https://raw.githubusercontent.com/furlyandisK/Luwascript/main/NotifyAPI.lua
-
-    STEP 2: Load it at the top of your LocalScript (once):
+    STEP 1: Load it at the top of your LocalScript (once):
             local Notify = loadstring(game:HttpGet("YOUR_RAW_URL"))()
 
-    STEP 3: Call it anywhere:
+    STEP 2: Call it anywhere:
 
         -- Message only
         Notify("Hello world!")
