@@ -1,9 +1,9 @@
 # LuwascriptApi
---[[
-    NOTIFYAPI - FULL GUIDE
+
+NOTIFYAPI - FULL GUIDE
     ----------------------
     STEP 1: Load it at the top of your LocalScript (once):
-            local Notify = loadstring(game:HttpGet("YOUR_RAW_URL"))()
+            local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/furlyandisK/LuwascriptApi/refs/heads/main/NotifyAPI.lua"))()
 
     STEP 2: Call it anywhere:
 
@@ -36,5 +36,6 @@
         - Click x to close it immediately
         - Up to 6 notifications stacked at once
         - Long messages auto-wrap, card grows to fit
-]]
+
+        i made this cuz me bored 
 
